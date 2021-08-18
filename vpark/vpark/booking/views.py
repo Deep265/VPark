@@ -128,7 +128,7 @@ def Booking(request,pk):
         # RazorPay
         amount = cost * 100
         client = razorpay.Client(
-            auth=("rzp_test_lZoT3MvZGTUO9O", "EN1J0b28FnZbUnz30gCsNNTl"))
+            auth=("<key_Id>", "<secret_key>"))
         payment = client.order.create({'amount': amount, 'currency': 'INR',
                                        'payment_capture': '1'})
 
